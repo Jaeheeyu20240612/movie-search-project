@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="movieCard.css">
+    <title>내배캠 최고 평점 영화</title>
+    <script>
+        const options = {
+            method: 'GET',
+            headers: {
+                accept: 'application/json',
+                Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3YjY3MWU1OTQ2MjhjNjRmMzdlNDk1ZjE0NjRhNjhlNSIsIm5iZiI6MTcyMTcxODY3NS42MTY1Mywic3ViIjoiNjY5ZWZkMmFlMmJlOWZmNmFhZTUzZjRiIiwic2NvcGVzIjpbImFwaV9yZWFkIl0sInZlcnNpb24iOjF9.jDaJ4fuJbN7vea7I18yLt9of8n6HL04Fd5M_9einYJw'
+            }
+        };
+
+        fetch("https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1", options)
+            .then(res => res.json())
+            .then(data => {
+                let rows = data['results'];
+                // console.log(rows)
+                let cardArea = document.querySelector('.cardArea');
+
+                for (i = 0; i < rows.length; i++) {
+                    let title = rows[i]['title']
+                    let overview = rows[i]['overview']
+                    let poster_path = rows[i]['poster_path']
+                    let vote_average = rows[i]['vote_average']
+                    let movieId = rows[i]['id']
+                    console.log(movieId)
+
+                    let temp_html = `
+                    <div class="card">
+                            <img id="img" class="item" src="https://image.tmdb.org/t/p/w200${poster_path}" alt="${title}img">
+                        <div class="pIncard">
+                            <p id="movieTitle" class="item">${title}</p>
+                            <p id="movieOvervie"class="item">${overview}</p>
+                            <p id="vote_average" class="item">Rating: ${vote_average}</p>
+                        <div>
+                    </div>
+                    `
+                    cardArea.insertAdjacentHTML("beforeend", temp_html);
+                    let card = cardArea.lastElementChild;
+                    let cardAdd = () => alert(`영화 id: ${movieId}`);
+                    // let cardAdd = function() {
+                    //     alert(`영화 id: ${movieId}`);
+                    // }
+                    card.addEventListener('click', cardAdd);
+                    // cardArea.innerHTML += temp_html; (innerHTML을 쓰면 카드를 추가하면서 기존 카드 요소에
+                    // 바인딩된 이벤트리스너가 사리진다)
+                };
+            });
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1 class="title">내배캠 최고 평점 영화 콜렉션</h1>
+    </header>
+
+    <div class="search">
+        <label for="inputLable">영화 검색 : </label>
+        <input id="inputcontent" placeholder="영화 제목을 검색해 보세요" type="text">
+        <button id="searchBtn">검색</button>
+    </div>
+
+    <div class="cardArea"></div>
+</body>
+
+</html>
