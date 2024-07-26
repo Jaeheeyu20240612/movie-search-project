@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="movieCard.css">
+
     <title>내배캠 최고 평점 영화</title>
     <script>
-         document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             let movieTitle = [];
             let overview = [];
             let poster_path = [];
@@ -42,7 +44,7 @@
                                 <p id="inCardTitle" class="item">${movieTitle[i]}</p>
                                 <p id="movieOvervie" class="item">${overview[i]}</p>
                                 <p id="vote_average" class="item">Rating: ${vote_average[i]}</p>
-                                <p>id: ${movieId[i]}</p>
+                               
                             </div>
                         </div>
                         `;
@@ -57,33 +59,48 @@
 
             // 검색
             document.getElementById('clickbtn').addEventListener('click', () => {
-                const query = document.getElementById('inputcontent').value.toLowerCase();
+                const query = document.getElementById('inputBox').value.toLowerCase();
                 const cards = document.querySelectorAll('.card');
                 cards.forEach(item => {
                     const inCardTitle = item.querySelector('#inCardTitle').textContent.toLowerCase();
+                    let filteredImg = item.querySelector('#img');
+                    let pTagInCard = item.querySelector('.pIncard');
                     if (inCardTitle.includes(query)) {
                         item.style.display = 'block';
+                        filteredImg.style.left = '9px';
+                        pTagInCard.style.left = '23px'
                     } else {
                         item.style.display = 'none';
                     }
                 });
             });
+            //
+
+
+            //
         });
+
     </script>
 </head>
 
 <body>
     <header>
-        <h1 class="title">내배캠 최고 평점 영화 콜렉션</h1>
+        <h1 class="h1title">내배캠 최고 평점 영화 콜렉션</h1>
     </header>
 
-    <div class="search">
-        <label for="inputLable">영화 검색 : </label>
-        <input id="inputcontent" placeholder="영화 제목을 검색해 보세요" type="text">
-        <button id="clickbtn">검색</button>
+    <div class="searchDiv">
+        <label class="inputLabel" for="inputBox">영화 검색 : </label>
+        <input id="inputBox" placeholder=" 제목을 입력해주세요." type="text">
+        <div>
+            <button id="clickbtn">검색</button>
+        </div>
     </div>
 
     <div class="cardArea"></div>
+
+    <div class="btnBox">
+        <button id="upBtn">위로</button>
+    </div>
 </body>
 
 </html>

@@ -1,6 +1,24 @@
-.title {
-    text-align: center;
+@font-face {
+    font-family: 'Danjo-bold-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Danjo-bold-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
 }
+
+@font-face {
+    font-family: 'MoveSans-Bold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405-2@1.0/MoveSans-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+.h1title {
+    font-family: 'Danjo-bold-Regular';
+    text-align: center;
+    font-size: xxx-large;
+    margin: 30px 0px 50px 0px;
+}
+
 
 .pIncard {
     width: 230px;
@@ -16,25 +34,9 @@
     border-radius: 8px;
     width: 260px;
     height: 390px;
+    object-fit: cover;
+    object-position: center top;
 }
-
-.search {
-    text-align: center;
-    height: 10vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-
-.search input {
-    margin-left: 10px;
-}
-
-.search>button {
-    margin-left: 10px;
-}
-
 .cardArea {
     display: flex;
     flex-direction: row;
@@ -45,18 +47,20 @@
 
 .card {
     position: relative;
+    box-shadow: 0px 0px 1px gray;
     display: inline-flex;
     border: 1px solid black;
     width: 280px;
     height: 780px;
     margin: 0px 150px 35px 150px;
     border-radius: 8px;
-
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     cursor: pointer;
+}
+.card:hover {
+    box-shadow: 1px 1px 20px gray;
 }
 
 #movieTitle {
@@ -75,4 +79,59 @@
 #vote_average {
     margin-top: 0px;
     font-size: 15px;
+}
+
+
+.searchDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+
+}
+
+#inputBox {
+    font-family: 'MoveSans-Bold';
+    font-size: 15px;
+    color: #aaa;
+    width: 300px;
+    height: 20px;
+    border: none;
+    outline: none;
+    border-bottom: solid #aaa 1px;
+    margin: 0px 15px 0px 15px;
+    vertical-align: middle;
+    padding-bottom: 0px;
+    background-color: transparent;
+  }
+
+  input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 500px white inset !important;
+  }
+
+#inputBox::placeholder {
+    font-family: 'MoveSans-Bold';
+    font-weight: 50;
+    font-size: 15px;
+}
+#inputBox:fill
+
+.inputLabel {
+    color: #aaa;
+    font-size: 15px;
+}
+
+#clickbtn {
+border: 1px solid rgba(126, 126, 126, 0.287);
+width: 50px;
+height: 30px;
+border-radius: 5px;
+color: #8a8a8a;
+vertical-align: middle;
+margin-bottom: 6px;
+cursor: pointer;
+}
+#clickbtn:hover {
+    box-shadow: 1px 1px 4px rgba(128, 128, 128, 0.558);
 }
