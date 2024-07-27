@@ -14,7 +14,6 @@
             let poster_path = [];
             let vote_average = [];
             let movieId = [];
-
             const options = {
                 method: 'GET',
                 headers: {
@@ -49,11 +48,12 @@
                         </div>
                         `;
                         cardArea.insertAdjacentHTML("beforeend", temp_html);
-                        let card = cardArea.lastElementChild;
 
-                        card.addEventListener('click', function () {
-                            alert(`영화 id: ${movieId[i]}`);
-                        });
+                        (function (index) {
+                            cardArea.lastElementChild.addEventListener('click', function () {
+                                alert(`영화 id: ${movieId[index]}`);
+                            });
+                        })(i);
                     }
                 });
 
@@ -74,12 +74,42 @@
                     }
                 });
             });
-            //
 
+            // 탑 버튼
+            let topBtn = document.querySelector('#topBtn'),
+                docElem = document.documentElement,
+                offset,
+                scrollPos,
+                docHeight;
 
-            //
+            docHeight = Math.max(docElem.scrollHeight, docElem.offsetHeight);
+
+            if (docHeight != 0) {
+                offset = docHeight / 4;
+            }
+
+            //스크롤 이벤트 추가하기
+            window.addEventListener('scroll', function () {
+                scrollPos = docElem.scrollTop;
+                topBtn.className = (scrollPos > offset) ? 'visible' : '';
+            });
+
+            topBtn.addEventListener('click', function (ev) {
+                ev.preventDefault();
+                scrollToTop();
+            })
+
+            function scrollToTop() {
+                var scrollInterval = setInterval(function () {
+                    scrollPos = docElem.scrollTop;
+                    if (scrollPos != 0) {
+                        window.scrollBy(0, -55)
+                    } else {
+                        clearInterval(scrollInterval);
+                    }
+                }, 15);
+            }
         });
-
     </script>
 </head>
 
@@ -98,9 +128,13 @@
 
     <div class="cardArea"></div>
 
-    <div class="btnBox">
-        <button id="upBtn">위로</button>
-    </div>
+    <footer>
+        <p></p>
+        <a id="topBtn" href="#">top</a>
+    </footer>
+    <script>
+
+    </script>
 </body>
 
 </html>

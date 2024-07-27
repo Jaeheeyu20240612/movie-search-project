@@ -115,8 +115,6 @@
     font-weight: 50;
     font-size: 15px;
 }
-#inputBox:fill
-
 .inputLabel {
     color: #aaa;
     font-size: 15px;
@@ -134,4 +132,14 @@ cursor: pointer;
 }
 #clickbtn:hover {
     box-shadow: 1px 1px 4px rgba(128, 128, 128, 0.558);
+}
+
+#topBtn {
+    position: fixed;
+    bottom: 3em;
+    right: 3em;
+    opacity: 0
+}
+#topBtn.visible {
+    opacity: 1;
 }
