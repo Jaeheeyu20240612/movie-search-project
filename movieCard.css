@@ -137,9 +137,18 @@ cursor: pointer;
 #topBtn {
     position: fixed;
     bottom: 3em;
-    right: 3em;
+    right: 2em;
     opacity: 0
 }
 #topBtn.visible {
     opacity: 1;
+}
+
+a {
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: bold;
+}
+a:link, a:visited {
+    color: #f1404b;;
 }
