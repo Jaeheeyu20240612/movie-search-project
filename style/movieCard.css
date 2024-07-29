@@ -1,15 +1,13 @@
 @font-face {
   font-family: "Danjo-bold-Regular";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Danjo-bold-Regular.woff2")
-    format("woff2");
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Danjo-bold-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "MoveSans-Bold";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2405-2@1.0/MoveSans-Bold.woff2")
-    format("woff2");
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2405-2@1.0/MoveSans-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -146,22 +144,4 @@ input:-webkit-autofill {
 }
 #clickbtn:hover {
   box-shadow: 1px 1px 4px rgba(128, 128, 128, 0.558);
-}
-
-#topBtn {
-  position: fixed;
-  bottom: 3em;
-  right: 2em;
-  opacity: 0;
-}
-#topBtn.visible {
-  opacity: 1;
-}
-
-a {
-  text-decoration: none;
-}
-a:link,
-a:visited {
-  color: #8a8a8a;
 }
