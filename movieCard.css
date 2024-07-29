@@ -1,154 +1,167 @@
 @font-face {
-    font-family: 'Danjo-bold-Regular';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Danjo-bold-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Danjo-bold-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Danjo-bold-Regular.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'MoveSans-Bold';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405-2@1.0/MoveSans-Bold.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
+  font-family: "MoveSans-Bold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2405-2@1.0/MoveSans-Bold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
 }
 
 .h1title {
-    font-family: 'Danjo-bold-Regular';
-    text-align: center;
-    font-size: xxx-large;
-    margin: 30px 0px 50px 0px;
+  font-family: "Danjo-bold-Regular";
+  text-align: center;
+  font-size: xxx-large;
+  margin: 30px 0px 60px 0px;
+}
+header > a {
+  font-family: "Danjo-bold-Regular";
+  position: absolute;
+  left: 46%;
+  padding-bottom: ;
+  transform: translate(0, -50px);
+  font-size: 15px;
+  font-weight: 700;
+  padding: 5px;
+  box-shadow: 1px 1px 8px 3px gray;
+  border-radius: 10px;
+}
+.veloglink {
+  margin-left: 130px;
 }
 
-
 .pIncard {
-    width: 230px;
-    height: 100px;
-    font-size: small;
-    position: absolute;
-    top: 410px;
+  width: 230px;
+  height: 100px;
+  font-size: small;
+  position: absolute;
+  top: 410px;
 }
 
 #img {
-    position: absolute;
-    top: 10px;
-    border-radius: 8px;
-    width: 260px;
-    height: 390px;
-    object-fit: cover;
-    object-position: center top;
+  position: absolute;
+  top: 10px;
+  border-radius: 8px;
+  width: 260px;
+  height: 390px;
+  object-fit: cover;
+  object-position: center top;
 }
 .cardArea {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .card {
-    position: relative;
-    box-shadow: 0px 0px 1px gray;
-    display: inline-flex;
-    border: 1px solid black;
-    width: 280px;
-    height: 780px;
-    margin: 0px 150px 35px 150px;
-    border-radius: 8px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+  position: relative;
+  box-shadow: 0px 0px 1px gray;
+  display: inline-flex;
+  border: 1px solid black;
+  width: 280px;
+  height: 780px;
+  margin: 0px 150px 35px 150px;
+  border-radius: 8px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 .card:hover {
-    box-shadow: 1px 1px 20px gray;
+  box-shadow: 1px 1px 20px gray;
 }
 
 #movieTitle {
-    margin-top: 0px;
-    font-weight: bold;
-    font-size: 17px;
+  margin-top: 0px;
+  font-weight: bold;
+  font-size: 17px;
 }
 
 #movieOvervie {
-    margin-top: 5px;
-    margin-bottom: 0px;
-    font-size: 15px;
-    line-height: 15.5px;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  font-size: 15px;
+  line-height: 15.5px;
 }
 
 #vote_average {
-    margin-top: 0px;
-    font-size: 15px;
+  margin-top: 0px;
+  font-size: 15px;
 }
 
-
 .searchDiv {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 50px;
-
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
 }
 
 #inputBox {
-    font-family: 'MoveSans-Bold';
-    font-size: 15px;
-    color: #aaa;
-    width: 300px;
-    height: 20px;
-    border: none;
-    outline: none;
-    border-bottom: solid #aaa 1px;
-    margin: 0px 15px 0px 15px;
-    vertical-align: middle;
-    padding-bottom: 0px;
-    background-color: transparent;
-  }
+  font-family: "MoveSans-Bold";
+  font-size: 15px;
+  color: #aaa;
+  width: 300px;
+  height: 20px;
+  border: none;
+  outline: none;
+  border-bottom: solid #aaa 1px;
+  margin: 0px 15px 0px 15px;
+  vertical-align: middle;
+  padding-bottom: 0px;
+  background-color: transparent;
+}
 
-  input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 500px white inset !important;
-  }
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 500px white inset !important;
+}
 
 #inputBox::placeholder {
-    font-family: 'MoveSans-Bold';
-    font-weight: 50;
-    font-size: 15px;
+  font-family: "MoveSans-Bold";
+  font-weight: 50;
+  font-size: 15px;
 }
 .inputLabel {
-    color: #aaa;
-    font-size: 15px;
+  color: #aaa;
+  font-size: 15px;
 }
 
 #clickbtn {
-border: 1px solid rgba(126, 126, 126, 0.287);
-width: 50px;
-height: 30px;
-border-radius: 5px;
-color: #8a8a8a;
-vertical-align: middle;
-margin-bottom: 6px;
-cursor: pointer;
+  border: 1px solid rgba(126, 126, 126, 0.287);
+  width: 50px;
+  height: 30px;
+  border-radius: 5px;
+  color: #8a8a8a;
+  vertical-align: middle;
+  margin-bottom: 6px;
+  cursor: pointer;
 }
 #clickbtn:hover {
-    box-shadow: 1px 1px 4px rgba(128, 128, 128, 0.558);
+  box-shadow: 1px 1px 4px rgba(128, 128, 128, 0.558);
 }
 
 #topBtn {
-    position: fixed;
-    bottom: 3em;
-    right: 2em;
-    opacity: 0
+  position: fixed;
+  bottom: 3em;
+  right: 2em;
+  opacity: 0;
 }
 #topBtn.visible {
-    opacity: 1;
+  opacity: 1;
 }
 
 a {
-    text-decoration: none;
-    font-size: 40px;
-    font-weight: bold;
+  text-decoration: none;
 }
-a:link, a:visited {
-    color: #f1404b;;
+a:link,
+a:visited {
+  color: #8a8a8a;
 }

@@ -65,6 +65,7 @@
                     const inCardTitle = item.querySelector('#inCardTitle').textContent.toLowerCase();
                     let filteredImg = item.querySelector('#img');
                     let pTagInCard = item.querySelector('.pIncard');
+
                     if (inCardTitle.includes(query)) {
                         item.style.display = 'block';
                         filteredImg.style.left = '9px';
@@ -110,22 +111,26 @@
                 }, 15);
             }
         });
+
+
     </script>
 </head>
 
 <body>
     <header>
         <h1 class="h1title">내배캠 최고 평점 영화 콜렉션</h1>
+        <a class="githublink" href="https://github.com/Jaeheeyu20240612/movie-search-project">github</a>
+        <a class="veloglink" href="https://velog.io/@bsjaehee94/posts">velog</a>
     </header>
 
     <div class="searchDiv">
         <label class="inputLabel" for="inputBox">영화 검색 : </label>
         <input id="inputBox" placeholder=" 제목을 입력해주세요." type="text">
+
         <div>
             <button id="clickbtn">검색</button>
         </div>
     </div>
-
     <div class="cardArea"></div>
 
     <footer>
