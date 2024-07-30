@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="./style/movieCard.css" />
     <link rel="stylesheet" href="./style/topBtn.css" />
+    <link rel="stylesheet" href="./style/header.css" />
     <script type="module" src="./src/main.js"></script>
   </head>
 
@@ -15,19 +16,18 @@
       <h1 class="h1title">내배캠 최고 평점 영화 콜렉션</h1>
       <a class="githublink" href="https://github.com/Jaeheeyu20240612/movie-search-project">github</a>
       <a class="veloglink" href="https://velog.io/@bsjaehee94/posts">velog</a>
+      <form action="" onsubmit="searchFunc()" class="searchDiv">
+        <label class="inputLabel" for="inputLabel"> </label>
+        <input id="inputBox" class="inputContent" placeholder=" 제목을 입력해주세요." type="text" />
+        <div>
+          <button id="clickbtn">검색</button>
+        </div>
+      </form>
     </header>
 
-    <form action="" onsubmit="searchFunc()" class="searchDiv">
-      <label class="inputLabel" for="inputBox">영화 검색 : </label>
-      <input id="inputBox" placeholder=" 제목을 입력해주세요." type="text" />
-      <div>
-        <button id="clickbtn">검색</button>
-      </div>
-    </form>
-
     <div class="cardArea"></div>
+
     <footer>
-      <p></p>
       <a id="topBtn" href="#">🔝</a>
     </footer>
     <script></script>

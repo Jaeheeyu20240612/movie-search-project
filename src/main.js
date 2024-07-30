@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", cardMakeFunc);
 
 let inputBox = document.getElementById("inputBox");
 inputBox.addEventListener("input", searchFunc);
-
+inputBox.focus();
 window.addEventListener("scroll", scrollStart);
 
 topBtn.addEventListener("click", prvent);
